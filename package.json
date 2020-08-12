@@ -12,5 +12,8 @@
     "fuse-bindings": "^2.11.2",
     "random-item": "^1.0.0",
     "twitter": "^1.7.1"
+  },
+  "devDependencies": {
+    "node": "^10.22.0"
   }
 }

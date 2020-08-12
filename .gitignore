@@ -2,3 +2,5 @@ node_modules/
 twitter/*
 !twitter/.keep
 config.json
+
+package-lock.json

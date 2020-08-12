@@ -1,0 +1,43 @@
+* twfs
+
+a fuse filesystem for tweets
+
+** installation
+
+you're going to need FUSE[fn:1] installed, and any fuse -devel packages if you're using a distro that splits those out (Void, Fedora and Debian do).
+
+i've included node@10 in the dev-dependencies, it works with that.
+
+open a terminal and run these commands:
+
+#+begin_src sh
+$ git clone https://git.snoot.club/chee/twfs.git
+$ cd twfs
+$ npm install
+#+end_src
+
+hopefully that worked.
+
+now create a working copy of the config:
+
+#+begin_src sh
+$ cp config.example.json config.json
+#+end_src
+
+now open that in a text editor. if you opened a fresh terminal, the ~twfs~ folder should be in your home directory ~:)~
+
+the keys and secrets to go in those variables can be retrieved when you've [[https://developer.twitter.com/en/portal/apps/new][created an app]][fn:2], go to its "keys and tokens" page. the "consumer" key and secret are called "API Key & Secret" in Twitter's web ui, and the access token & secret
+
+now you can run
+
+#+begin_src sh
+$ npx node index.js
+#+end_src
+
+and it will mount a file system at ~~./twitter~. if you run ~cat twitter/username~ it will print username's latest tweet.
+
+* Footnotes
+
+[fn:1] [[https://github.com/libfuse/libfuse/][FUSE]] on linux, [[https://osxfuse.github.io/][OSXFuse]] on macOS and [[https://github.com/dokan-dev/dokany/releases][Dokany]] on Windows
+
+[fn:2] i'm not sure the exact steps, i'm using an app i made a long time ago
