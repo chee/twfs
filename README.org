@@ -11,7 +11,7 @@ i've included node@10 in the dev-dependencies, it works with that.
 open a terminal and run these commands:
 
 #+begin_src sh
-$ git clone https://git.snoot.club/chee/twfs.git
+$ git clone https://github.com/chee/twfs.git
 $ cd twfs
 $ npm install
 #+end_src
