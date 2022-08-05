@@ -1,0 +1,2 @@
+#!/bin/sh
+pandoc --from org --to gfm README.org > README.md
